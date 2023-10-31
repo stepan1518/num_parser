@@ -32,7 +32,7 @@ model = keras.Sequential([
     Dense(10, activation='softmax')
 ])
 
-print(model.summary())      # вывод структуры НС в консоль
+print(model.summary())
 
 model.compile(optimizer='adam',
              loss='categorical_crossentropy',
@@ -52,5 +52,4 @@ print( np.argmax(res) )
 plt.imshow(x_test[n], cmap=plt.cm.binary)
 plt.show()
 
-# Распознавание всей тестовой выборки
-pred = model.predict(x_test)
+print(model.predict(x_test))
